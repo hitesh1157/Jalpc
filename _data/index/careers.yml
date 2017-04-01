@@ -14,6 +14,23 @@
   #   i18n: company_a_job
   icon: fa-plus-square
 
+- name:
+    detail: Undergraduate Program at IIT Kanpur
+    i18n: company_a
+  desc:
+    detail: B.Tech major in AE
+    i18n: company_a_desc
+  date:
+    detail: 27 July 2016 - 2020
+    i18n: company_a_date
+  # job:
+  #   detail: CTO
+  #   i18n: company_a_job
+  icon: fa-plus-square
+
+
+
+
 # - name:
 #     detail: Company B
 #     i18n: company_b
