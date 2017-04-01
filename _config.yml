@@ -14,10 +14,10 @@ author:  # change following line to your infomation.
   name: GitHub  # Be used at blog posts' author.
   first_name: Hub  # Be used at index page about me section.
   last_name: Git  # Be used at index page about me section.
-  cv: http://cv.jack003.com  # A online CV can be printed as PDF, leave blank if you don't have now
-  email: me@jack003.com  # Leave blank if you don't have now
-  facebook_username: jiakunnj  # Leave blank if you don't have now
-  github_username: jarrekk  # Leave blank if you don't have now
+  cv:  # A online CV can be printed as PDF, leave blank if you don't have now
+  email: hiteshkr@iitk.ac.in  # Leave blank if you don't have now
+  facebook_username: hiteshkm7  # Leave blank if you don't have now
+  github_username: hitesh1157  # Leave blank if you don't have now
   avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
   skill_icon1:
     - name: icon-apache
