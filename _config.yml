@@ -10,9 +10,9 @@ url: http://hitesh1157.github.io/Jalpc  # url should be 'http://<github_username
 img_path: /Jalpc/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
 # author -- index page "about me" section
-author:  # change following line to your infomation.
+author: Hitesh Kumar Rawat # change following line to your infomation.
   name: GitHub  # Be used at blog posts' author.
-  first_name: # Be used at index page about me section.
+  first_name: Hitesh Kumar Rawat # Be used at index page about me section.
   last_name: Freshman, IIT Kanpur  # Be used at index page about me section.
   avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
   github_username: hitesh1157  # Leave blank if you don't have now
@@ -49,7 +49,7 @@ gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your 
   # id:
 
 ## donation
-donation: on  # type 'on'/'off' to choice display donation button at post page or not
+donation: off  # type 'on'/'off' to choice display donation button at post page or not
 
 
 # Build settings
