@@ -13,7 +13,7 @@
   gh_user:
   repo:
   img: /static/assets/img/landing/cc.png
-  desc: ACA Semester(II) long project, Department of Computer Science and Engineering. Checkout my blog !
+  desc: ACA Semester(II) long project, Department of Computer Science and Engineering. Checkout my blog for more !
 
 # - name: LeetCode
 #   i18n: leetcode
