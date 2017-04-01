@@ -1,4 +1,4 @@
-# <a name="jalpc"></a>Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/jarrekk/Jalpc)
+# <a name="jalpc"></a>Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/Jack614/jalpc_jekyll_theme)
 
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
@@ -6,7 +6,7 @@
 
 <https://jarrekk.github.io/Jalpc/>
 
-![Blog](https://github.com/jarrekk/Jalpc/raw/master/readme_files/Jalpc.png)
+![Blog](readme_files/blog.gif)
 
 * [3 steps to setup this theme at your website!](#three-steps)
 * [Features](#features)
@@ -27,9 +27,9 @@
     * [Ensure there's an upstream remote](#ensure-theres-an-upstream-remote)
     * [Pull in the latest changes](#pull-in-the-latest-changes)
 * [Thanks to the following](#thanks-to-the-following)
+* [Contributing](#contributing)
 * [Todo](#todo)
 * [Change Log](#change-log)
-* [Donate Jalpc](#donate)
 * [Ad](#ad)
 
 This is a simple, beautiful and swift theme for Jekyll. It's mobile first, fluidly responsive, and delightfully lightweight.
@@ -38,7 +38,7 @@ If you're completely new to Jekyll, I recommend checking out the documentation a
 
 ## <a name="three-steps"></a> 3 steps to setup this theme at your website!
 
-Here is a [document](https://jarrekk.github.io/Jalpc/html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html) of how to setup this theme with 3 steps and a [wiki](https://github.com/jarrekk/Jalpc/wiki/How-to-add-posts) of how to add posts. If you have any **questions** please ask me at [GitHub Issues](https://github.com/jarrekk/Jalpc/issues).
+Here is a [document](https://jarrekk.github.io/Jalpc/html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html) of how to setup this theme with 3 steps.
 
 ## <a name="feature"></a>Features
 
@@ -101,7 +101,7 @@ For example: URL is `http://127.0.0.1:4000/python/`. In `_data/blog.yml`, we def
 
 ### <a name="pagination"></a>Pagination
 
-The pagination in jekyll is not very perfect,so I use front-end web method,there is a [blog](http://www.jarrekk.com/html/2016/06/04/jekyll-pagination-with-jpages.html) about the method and you can refer to [jPages](http://luis-almeida.github.io/jPages).
+The pagination in jekyll is not very perfect,so I use front-end web method,there is a [blog](http://www.jack003.com/html/2016/06/04/jekyll-pagination-with-jpages.html) about the method and you can refer to [jPages](http://luis-almeida.github.io/jPages).
 
 ### <a name="page-views-counter"></a>Page views counter
 
@@ -113,9 +113,66 @@ The landing page has multilingual support with the [i18next](http://i18next.com)
 
 Languages are configured in the `_data/index/language.yml` file.
 
-> Not everyone needs this feature, so I make it very easy to remove it, just clear content in file `_data/language.yml` and folder `static/locales/`.
+> If you don't need this feature, please clear content in file `_data/language.yml` and folder `static/locales/`.
 
-About how to custom multilingual page, please see [wiki](https://github.com/jarrekk/Jalpc/wiki/Multilingual-Page).
+#### Step 1
+
+Add a new language entry
+
+```yml
+languages:
+  - locale: 'en'
+    flag: 'static/img/flags/United-States.png'
+  - locale: '<language_locale>'
+    flag: '<language_flag_url>'
+```
+
+#### Step 2
+
+Add a new json (`static/locales/<language_locale>.json`) file that contains the translations for the new locale.
+
+Example `en.json`
+
+```json
+{
+  "website":{
+    "title": "Jalpc"
+  },
+  "nav":{
+    "home": "Home",
+    "about_me": "About",
+    "skills": "Skills",
+    "career": "Career",
+    "blog": "Blog",
+    "contact": "Contact"
+  }
+}
+```
+
+#### Step 3
+
+Next you need to add html indicators in all place you want to use i18n.(`_includes/sections/*.html` and `index.html`)
+
+Example:
+
+``` html
+<a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
+```
+
+#### Step 4
+
+Next you need to initialise the i18next plugin(`index.html`):
+
+``` javascript
+$.i18n.init(
+    resGetPath: 'locales/__lng__.json',
+    load: 'unspecific',
+    fallbackLng: false,
+    lng: 'en'
+}, function (t)
+    $('#i18_title').i18n();
+});
+```
 
 ### <a name="web-analytics"></a>Web analytics
 
@@ -129,13 +186,15 @@ I use [Disqus](https://disqus.com/) to realize comment. You should set disqus_sh
 
 I use [AddToAny](https://www.addtoany.com/) to share my blog on other social network platform. You can go to this website to custom your share buttons and paste code at `_includes/share.html`.
 
-![share](https://github.com/jarrekk/Jalpc/raw/master/readme_files/share.png)
+![share](readme_files/share.png)
 
 ### <a name="search-engines"></a>Search engines
 
-I use javascript to realize blog search,you can double click `Ctrl` or click the icon at lower right corner of the page,the detail you can got to this [repository](https://github.com/androiddevelop/jekyll-search). Just use it.
+I use javascript to realize blog search,you can double click `Ctrl` or click the icon at lower right corner of the page,the detail you can got to this repo: <https://github.com/androiddevelop/jekyll-search>.
 
-![search](https://github.com/jarrekk/Jalpc/raw/master/readme_files/search.gif)
+Just use it.
+
+![search](readme_files/search.gif)
 
 ### <a name="compress-css-js"></a>Compress CSS and JS files
 
@@ -143,14 +202,14 @@ All CSS and JS files are compressed at `/static/assets`.
 
 I use [UglifyJS2](https://github.com/mishoo/UglifyJS2), [clean-css](https://github.com/jakubpawlowicz/clean-css) and [purifycss](https://github.com/purifycss/purifycss) to compress/purify CSS and JS files. If you want to custom CSS and JS files, you need to do the following:
 
-1. Install [NPM](https://github.com/npm/npm) then install **UglifyJS2** and **clean-css**: `npm install -g uglifyjs; npm install -g clean-css`, then run `npm install` at root dir of project.
+1. Install **UglifyJS2** and **clean-css**: `npm install -g uglifyjs; npm install -g clean-css`, then run `npm install` at root dir of project.
 2. Compress script is **build.js**, index page has its own CSS and JS compressed files, they are :
-  * **app-xxx.min.css**
+  * **app-index-xxx.min.css**
   * **app-index-xxx.min.js**
   * **i18-xxx.min.js**
 
   404 page are
-  * **app-xxx.min.css**
+  * **fof-xxx.min.css**
   * **fof-xxx.min.js**
 
   other pages are
@@ -159,11 +218,11 @@ I use [UglifyJS2](https://github.com/mishoo/UglifyJS2), [clean-css](https://gith
   * **jPage-xxx.min.js**
 
   **xxx** is date when you compress your files.
-3. If you want to add or remove CSS/JS files, just edit **build/build.js** and **build/files.conf.js**, then run `npm run build` at root dir of project, link/src files will use new files.
+3. If you want to add/remove CSS/JS files, just edit **build/build.js** and **build/files.conf.js**, then run `npm run build` at root dir of project, link/src files will use new files.
 
 ## <a name="put-in-a-jalpc-plug"></a>Put in a Jalpc Plug
 
-If you want to give credit to the Jalpc theme with a link to my personal website <http://www.jarrekk.com>, that'd be awesome. No worries if you don't.
+If you want to give credit to the Jalpc theme with a link to my personal website <http://www.jack003.com>, that'd be awesome. No worries if you don't.
 
 ## <a name="upgrading-jalpc"></a>Upgrading Jalpc
 
@@ -174,7 +233,7 @@ Jalpc is always being improved by its users, so sometimes one may need to upgrad
 If `git remote -v` doesn't have an upstream listed, you can do the following to add it:
 
 ```
-git remote add upstream https://github.com/jarrekk/Jalpc.git
+git remote add upstream https://github.com/jarrekk/jalpc_jekyll_theme.git
 ```
 
 ### <a name="pull-in-the-latest-changes"></a>Pull in the latest changes
@@ -197,20 +256,41 @@ There may be merge conflicts, so be sure to fix the files that git lists if they
 * [Chart.js](http://www.chartjs.org/)
 * [shelljs](https://github.com/shelljs/shelljs)
 * [colors](https://github.com/marak/colors.js/)
-* [Font Awesome](http://fontawesome.io/icons/)
-* [Font Mfizz](http://fizzed.com/oss/font-mfizz)
+
+## <a name="contributing"></a>Contributing
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
 
 ## <a name="todo"></a>Todo
-- [ ] `jekyll server --watch` mode need to use original CSS/JS files
-- [ ] User can customise index page's section title.
+1. `jekyll server --watch` mode need to use original CSS/JS files
 
 ##  <a name="change-log"></a>Change Log
-Please see [wiki](https://github.com/jarrekk/Jalpc/wiki/Change-Log)
-
-## <a name="donate"></a>Donate Jalpc
-If this project let you enjoy your blog time, you can give me a cup of coffee :)
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/jarrekk)
+* v1.1.2
+  * purify style.css
+* v1.1.1
+  * display skills with Chart.js
+  * add shelljs and colors
+  * compress CSS/JS file with build.js automatically
+* v1.1.0
+  * Speed up!! reduce request times and file size
+  * change bower to npm
+  * compress CSS/JS files with uglifyjs and clean-css
+* v1.0.5
+  * add donation page
+  * fix basuurl and url bug
+* v1.0.4
+  * use **_data** to config index page
+  * separate index page by sections
+* v1.0.3
+  * change color
+  * remove unused css code
+* v1.0.2
+  * use jPages to realize pagination
+* v1.0.1
+  * first release
 
 ## <a name="ad"></a>Ad
 [Jalpc-A](https://github.com/Jack614/Jalpc-A): another Jekyll theme written by [AngularJS](https://angularjs.org/).
