@@ -1,18 +1,18 @@
 # links section data
 - last_name: Facebook
-  first_name: Hitesh Kumar
+  first_name:
   desc: hiteshkm7
   website: https://www.google.com
   email: ceo@google.com
 
 - last_name: Twitter
-  first_name: Hitesh Kumar
+  first_name:
   desc: hiteshkm7
   website: http://www.twitter.com/hiteshkm7/
   email: hiteshkr1711@gmail.com
 
 - last_name: Instagram
-  first_name: Hitesh Kumar
+  first_name:
   desc: hiteshkm7
   website: https://github.com
   email: hiteshkr1711@gmail.com
@@ -24,13 +24,13 @@
   email: hiteshkr.git@gmail.com
 
 - last_name: Quora
-  first_name: Hitesh Kumar
+  first_name:
   desc:
   website: https://www.quora.com/profile/Hitesh-Kumar-388
   email: hiteshkr1711@gmail.com
 
 - last_name: Gmail
-  first_name: Hitesh Kumar Rawat
+  first_name:
   desc: hiteshkr1711
   website: https://www.google.com
   email: hiteshkr1711@gmail.com
