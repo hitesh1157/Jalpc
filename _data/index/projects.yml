@@ -8,6 +8,13 @@
   img: /static/assets/img/landing/codefundo.png
   desc: The App implements basics of Online database management using PHP, Java integrated within Android development environment.
 
+- name: Basics of Computation Complexity Theory
+#  i18n: jalpc
+  gh_user: hitesh1157
+  repo: Computational-Complexity
+  img: /static/assets/img/landing/codefundo.png
+  desc: Turing Machines, P vs NP Classes
+
 # - name: LeetCode
 #   i18n: leetcode
 #   gh_user: kamyu104
