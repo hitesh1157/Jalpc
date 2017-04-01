@@ -11,9 +11,9 @@
 - name: Basics of Computation Complexity Theory
 #  i18n: jalpc
   gh_user:
-  repo: 
+  repo:
   img: /static/assets/img/landing/codefundo.png
-  desc: Turing Machines, P vs NP Classes
+  desc: ACA Semester(II) long project, Department of Computer Science and Engineering. Checkout my blog !
 
 # - name: LeetCode
 #   i18n: leetcode
