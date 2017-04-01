@@ -1,10 +1,4 @@
 # links section data
-- last_name: Quora
-  first_name: 
-  desc: Hitesh Kumar
-  website: https://www.quora.com/profile/Hitesh-Kumar-388
-  email: hiteshkr1711@gmail.com
-
 - last_name: Facebook
   first_name:
   desc: hiteshkm7
@@ -34,3 +28,9 @@
   desc: hiteshkr1711
   website: https://www.google.com
   email: hiteshkr1711@gmail.com
+
+- last_name: Quora
+  first_name:
+  desc: Hitesh Kumar
+  website: https://www.quora.com/profile/Hitesh-Kumar-388
+  email: hiteshkr1711@gmail.com  
