@@ -12,7 +12,7 @@
 #  i18n: jalpc
   gh_user:
   repo:
-  img: /static/assets/img/landing/codefundo.png
+  img: /static/assets/img/landing/cc.png
   desc: ACA Semester(II) long project, Department of Computer Science and Engineering. Checkout my blog !
 
 # - name: LeetCode
