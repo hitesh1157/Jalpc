@@ -5,8 +5,8 @@
   i18n: jalpc
   gh_user: hitesh1157
   repo: androidStudio
-  img: /static/assets/img/landing/jekyll.png
-  desc: The App implements basics of Online database management using PHP, Java integrated within Android development environment. 
+  img: /static/assets/img/landing/codefundo.png
+  desc: The App implements basics of Online database management using PHP, Java integrated within Android development environment.
 
 # - name: LeetCode
 #   i18n: leetcode
